@@ -2,7 +2,7 @@
 
 julia_version = "1.11.1"
 manifest_format = "2.0"
-project_hash = "b6bf45bad5d8e18e549b1d936af36c7e2c26c34b"
+project_hash = "e763c58e77e19808f1dffe7e2a40778f1d019d09"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "eea5d80188827b35333801ef97a40c2ed653b081"
@@ -3886,6 +3886,12 @@ version = "0.7.6"
 deps = ["InteractiveUtils", "Markdown", "Sockets", "StyledStrings", "Unicode"]
 uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
 version = "1.11.0"
+
+[[deps.ROOT]]
+deps = ["Conda", "CxxWrap", "Libdl", "Pkg", "Scratch", "TOML", "UUIDs"]
+git-tree-sha1 = "0eaa1d4a0a2d159d2d867ace043d47bcf9d16e6d"
+uuid = "1706fdcc-8426-44f1-a283-5be479e9517c"
+version = "0.3.2"
 
 [[deps.Random]]
 deps = ["SHA"]
