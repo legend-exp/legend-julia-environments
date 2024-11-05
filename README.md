@@ -1,7 +1,7 @@
-LEGEND Julia Base environment
+# LEGEND Julia environments
 
-This [Julia project environment](https://pkgdocs.julialang.org/v1/environments/)
-contains the major set of general Julia packages that the LEGEND Julia
+The [Julia project environment](https://pkgdocs.julialang.org/v1/environments/)
+`base` contains the major set of general Julia packages that the LEGEND Julia
 software depends on.
 
 The main use case of this pre-defined environment is Julia package installation
