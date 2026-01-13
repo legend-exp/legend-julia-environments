@@ -14,12 +14,13 @@ prjdir = dirname(prjfile)
 
 ENV["JULIA_PKG_DEVDIR"] = joinpath(dirname(prj.path), "pkgs")
 
-prjfile_orig = tempname(prjdir, suffix = "_Project.toml", cleanup = false)
-cp(prjfile , prjfile_orig)
+prjfile_tmp = tempname(prjdir, suffix = "_Project.toml", cleanup = false)
+cp(prjfile , prjfile_tmp)
 try
+    Pkg.activate(prjfile_tmp)
     Pkg.develop(collect(keys(prj.sources)))
 finally
-    mv(prjfile_orig, prjfile, force = true)
+    rm(prjfile_tmp)
 end
 
 Pkg.instantiate()
