@@ -23,4 +23,5 @@ finally
     rm(prjfile_tmp)
 end
 
+Pkg.activate(prjfile)
 Pkg.instantiate()
