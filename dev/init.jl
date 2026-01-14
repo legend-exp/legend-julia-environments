@@ -2,9 +2,7 @@ import Pkg
 
 Pkg.setprotocol!(protocol = "ssh")
 
-if basename(dirname(Pkg.project().path)) != "legend-dev"
-    Pkg.activate(@__DIR__)
-end
+Pkg.activate(@__DIR__)
 
 import Pkg
 prj = Pkg.project()
@@ -12,16 +10,20 @@ prj = Pkg.project()
 prjfile = prj.path
 prjdir = dirname(prjfile)
 
-ENV["JULIA_PKG_DEVDIR"] = joinpath(dirname(prj.path), "pkgs")
-
-prjfile_tmp = tempname(prjdir, suffix = "_Project.toml", cleanup = false)
-cp(prjfile , prjfile_tmp)
-try
-    Pkg.activate(prjfile_tmp)
-    Pkg.develop(collect(keys(prj.sources)))
-finally
-    rm(prjfile_tmp)
+if !(basename(prjdir) == "dev" && basename(dirname(prjdir)) == "legend-julia-environments")
+    error("This script must be run from the dev/ directory of the legend-julia-environments repository.")
 end
 
-Pkg.activate(prjfile)
+devdir = joinpath(dirname(dirname(prj.path)), "pkgrepos")
+ENV["JULIA_PKG_DEVDIR"] = devdir
+
+devpkgs = first.(filter(s -> haskey(s.second, "path"), collect(prj.sources)))
+
+Pkg.activate(; temp=true)
+prjfile_tmp = Pkg.project().path
+cp(prjfile , prjfile_tmp)
+Pkg.develop(devpkgs)
+
+Pkg.activate(prjdir)
+Pkg.resolve()
 Pkg.instantiate()

@@ -127,16 +127,16 @@ Zygote = "e88e6eb3-aa80-5325-afca-941959d7151f"
 
 [sources]
 BlackBoxOptim = {rev = "master", url = "https://github.com/robertfeldt/BlackBoxOptim.jl.git"}
-LegendDSP = {path = "pkgs/LegendDSP"}
-LegendDataManagement = {path = "pkgs/LegendDataManagement"}
-LegendDataTypes = {path = "pkgs/LegendDataTypes"}
-LegendEventAnalysis = {path = "pkgs/LegendEventAnalysis"}
-LegendHDF5IO = {path = "pkgs/LegendHDF5IO"}
-LegendMakie = {path = "pkgs/LegendMakie"}
-LegendSpecFits = {path = "pkgs/LegendSpecFits"}
-LegendTestData = {path = "pkgs/LegendTestData"}
-LegendTextIO = {path = "pkgs/LegendTextIO"}
-RadiationDetectorDSP = {path = "pkgs/RadiationDetectorDSP"}
-RadiationDetectorSignals = {path = "pkgs/RadiationDetectorSignals"}
-RadiationSpectra = {path = "pkgs/RadiationSpectra"}
-SolidStateDetectors = {path = "pkgs/SolidStateDetectors"}
+LegendDSP = {path = "../pkgrepos/LegendDSP"}
+LegendDataManagement = {path = "../pkgrepos/LegendDataManagement"}
+LegendDataTypes = {path = "../pkgrepos/LegendDataTypes"}
+LegendEventAnalysis = {path = "../pkgrepos/LegendEventAnalysis"}
+LegendHDF5IO = {path = "../pkgrepos/LegendHDF5IO"}
+LegendMakie = {path = "../pkgrepos/LegendMakie"}
+LegendSpecFits = {path = "../pkgrepos/LegendSpecFits"}
+LegendTestData = {path = "../pkgrepos/LegendTestData"}
+LegendTextIO = {path = "../pkgrepos/LegendTextIO"}
+RadiationDetectorDSP = {path = "../pkgrepos/RadiationDetectorDSP"}
+RadiationDetectorSignals = {path = "../pkgrepos/RadiationDetectorSignals"}
+RadiationSpectra = {path = "../pkgrepos/RadiationSpectra"}
+SolidStateDetectors = {path = "../pkgrepos/SolidStateDetectors"}
