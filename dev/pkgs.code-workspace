@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "../pkgrepos/LegendDSP"
+		},
+		{
+			"path": "../pkgrepos/LegendDataManagement"
+		},
+		{
+			"path": "../pkgrepos/LegendDataTypes"
+		},
+		{
+			"path": "../pkgrepos/LegendEventAnalysis"
+		},
+		{
+			"path": "../pkgrepos/LegendHDF5IO"
+		},
+		{
+			"path": "../pkgrepos/LegendMakie"
+		},
+		{
+			"path": "../pkgrepos/LegendSpecFits"
+		},
+		{
+			"path": "../pkgrepos/LegendTestData"
+		},
+		{
+			"path": "../pkgrepos/LegendTextIO"
+		},
+		{
+			"path": "../pkgrepos/RadiationDetectorDSP"
+		},
+		{
+			"path": "../pkgrepos/RadiationDetectorSignals"
+		},
+		{
+			"path": "../pkgrepos/RadiationSpectra"
+		},
+		{
+			"path": "../pkgrepos/SolidStateDetectors"
+		}
+	]
+}
